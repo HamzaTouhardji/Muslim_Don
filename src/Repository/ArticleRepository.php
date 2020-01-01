@@ -19,6 +19,37 @@ class ArticleRepository extends ServiceEntityRepository
         parent::__construct($registry, Article::class);
     }
 
+    /**
+     * return les derniers articles 
+     * @return Artciles[]
+     */
+    public function findLatest(): array
+    {
+        return $this->findVisibleQuery()
+        ->setMaxResults(4)
+        ->getQuery()
+        ->getResult();
+    }
+
+    /**
+     * @return Artciles[]
+     */
+    public function findAllVisible(): array
+    {
+        return $this->findVisibleQuery()
+            ->getQuery()
+            ->getResult();
+    }
+    
+    /**
+     * @return QueryBuilder
+     */
+    private function findVisibleQuery()
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.donate = false');
+    }
+
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */

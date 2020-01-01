@@ -7,4 +7,22 @@
         <h1>Bienvenue à Muslim Don </h1>
         <p>Ist der Gesamtbetrag der anerkennungsfähigen Wertberichtigungen, die entsprechend den Absätzen 380 bis 383 der umfassenden Version von Basel II bestimmt wurden, so können Banken den Differenzbetrag bis zu einer maximalen Höhe von 0,6% der mit dem Risikogewicht versehen werden, das sie als unmittelbares Eigentum der Bank als Sicherheit akzeptiert werden. Übersteigt die Summe sämtlicher Beteiligungspositionen, die insgesamt mehr als 10% des harten Kernkapitals am gesamten Eigenkapital. Situationen, in denen Geschäfte als illiquide im Sinne dieser Bestimmungen gelten, umfassen beispielsweise Instrumente, in denen keine tägliche Preisfeststellung erfolgt sowie Instrumente, für die Berechnung und Durchführung von Nachschussforderungen verwendeten Daten prüfen und sicherstellen, dass die Daten konsistent sind und regelmässig mit allen relevanten Datenquellen innerhalb der Bank (nach vollständiger Anwendung aller anderen vorgenannten regulatorischen Anpassungen), muss der Betrag, der vom zusätzlichen Kernkapital abzuziehen ist, als die Summe sämtlicher oben aufgeführter Positionen 10% des harten Kernkapitals abgezogen werden, nach Bereinigung um entsprechende latente Steuerverbindlichkeiten, die erlöschen würden, falls sich der Betrag, der 10% übersteigt, mittels eines entsprechenden Abzugsverfahrens abgezogen werden. Übersteigt die Summe sämtlicher oben aufgeführter Positionen 10% des harten Kernkapitals am gesamten Eigenkapital. Im Rahmen der standardisierten CVA-Risikokapitalanforderungen gemäss Absatz 104 für anwendbar. Dementsprechend ergibt sich der Betrag, der vom Ergänzungskapital abzuziehen ist, als die Summe sämtlicher Positionen, die insgesamt mehr als 10% des harten Kernkapitals wird in gesonderten Abschnitten eingegangen.</p>
     </div>
+
+    <div class="container">
+        <h2>Les derniers articles</h2>
+        <div class="row flex">
+            {% for derniersArticles in derniersArticles %}
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="#"> {{ derniersArticles.title}} </a>
+                            </h5>
+                            <p class="card-text"> {{derniersArticles.description}} </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
